@@ -1,8 +1,7 @@
 /*
-Mechatronic Project
-Maze Solver Robot
-HFU - BME - WS25/26
-Mehdi Farzaneh
+Maze Solver Robot: Right Wall Follow
+Mechatronic Project - HFU - BME - WS25/26
+By: Mehdi Farzaneh
 */
 
 #include "VL53L0X.h" 
