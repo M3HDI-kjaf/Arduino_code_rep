@@ -1,1 +1,20 @@
 # Arduino_code_rep
+
+Mechatronic Project: Maze Solver Robot
+Furtwangen University - Biomedical Engineering - WS25/26
+By: Mehdi Farzaneh
+
+Hardware:
+  Time of Flight sensor x3 (or Ultrasound sensors)
+    - To detect distance from left, right, and front walls
+  DC Motor x2 with gear
+  Driver (L298N)
+  Photo Resistor sensor
+  Arduino board
+  Switch
+
+Algorithm:
+  Right-Wall follow maze solver
+
+Objective:
+  The robot should solve the maze and stop when it reaches the black spot.
