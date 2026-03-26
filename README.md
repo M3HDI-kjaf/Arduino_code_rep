@@ -1,4 +1,4 @@
-# Arduino_code_rep
+# Arduino_project
 
 Mechatronic Project: Maze Solver Robot
 Furtwangen University - Biomedical Engineering - WS25/26
