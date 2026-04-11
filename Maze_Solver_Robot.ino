@@ -1,9 +1,3 @@
-/*
-Maze Solver Robot: Right Wall Follow
-Mechatronic Project - HFU - BME - WS25/26
-By: Mehdi Farzaneh
-*/
-
 #include "VL53L0X.h" 
 #include "Wire.h"
 
@@ -12,7 +6,6 @@ class ToF_Sensor
   byte address;
   byte pin;
   VL53L0X dis_sensor;
-
  public:
  ToF_Sensor(byte sensor_address, byte SHT_pin){
     address = sensor_address;
@@ -24,14 +17,12 @@ class ToF_Sensor
    digitalWrite(pin,LOW);
    delay(10);
   }
-
   void Change_Adrs(){
    digitalWrite(pin,HIGH);
    delay(10);
    dis_sensor.setAddress((uint8_t)address);
    digitalWrite(pin,LOW);
   }
-
   void init(){
    digitalWrite(pin,HIGH);
    if(!dis_sensor.init()){ 
@@ -42,7 +33,6 @@ class ToF_Sensor
    dis_sensor.setMeasurementTimingBudget(200000); 
    dis_sensor.startContinuous(); 
   }
-
  int distance(){
    return dis_sensor.readRangeContinuousMillimeters(); 
  }
@@ -52,7 +42,6 @@ class Us_Sensor
 {
   byte Trig;
   byte Echo;
-
  public:
  Us_Sensor(byte Trig_pin, byte Echo_pin){
     Trig = Trig_pin;
@@ -63,7 +52,6 @@ class Us_Sensor
     pinMode(Echo, INPUT);
     pinMode(Trig, OUTPUT);
   }
-
  long distance(){
   digitalWrite(Trig, LOW);
   delayMicroseconds(2);
@@ -84,7 +72,6 @@ class DC_Motor
   byte LM_2;
   byte LM_enable;
   byte PWM;
-
  public:
  DC_Motor(byte rm_1, byte rm_2, byte rm_en, byte lm_1, byte lm_2, byte lm_en){
   RM_1 = rm_1;
@@ -103,7 +90,6 @@ class DC_Motor
   pinMode(LM_2, OUTPUT);
   pinMode(LM_enable, OUTPUT);
  }
-
  void turn_right(byte PWM) {// Turn right 90 deg if no wall on the right
     analogWrite(RM_enable, PWM);
     digitalWrite(RM_1, LOW);
@@ -112,7 +98,6 @@ class DC_Motor
     digitalWrite(LM_1, HIGH);
     digitalWrite(LM_2, LOW);
  }
-
  void turn_around(byte PWM) {// Turn 180 deg if wall Ahead and on the Right
     analogWrite(RM_enable, PWM);
     digitalWrite(RM_1, LOW);
@@ -130,7 +115,6 @@ class DC_Motor
     digitalWrite(LM_1, HIGH);
     digitalWrite(LM_2, LOW);
  }
-
   void tilt_right(byte PWM) {// Turn right a few deg 
     analogWrite(RM_enable, PWM);
     digitalWrite(RM_1, LOW);
@@ -139,7 +123,6 @@ class DC_Motor
     digitalWrite(LM_1, HIGH);
     digitalWrite(LM_2, LOW);
  }
-
   void tilt_left(byte PWM) {// Turn left a few deg 
     analogWrite(RM_enable, PWM);
     digitalWrite(RM_1, HIGH);
@@ -148,7 +131,6 @@ class DC_Motor
     digitalWrite(LM_1, LOW);
     digitalWrite(LM_2, HIGH);
  }
-
  void Stop() {
   analogWrite(RM_enable, 0);
   analogWrite(LM_enable, 0);
