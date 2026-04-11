@@ -1,9 +1,9 @@
 # Maze Solver Robot
-## Arduino_Programming
+## Arduino Programming
 
-Mechatronic Project: Maze Solver Robot
-Furtwangen University - Biomedical Engineering - WS25/26
-By: Mehdi Farzaneh
+Mechatronic Project: Maze Solver Robot/n
+Furtwangen University - Biomedical Engineering - WS25/26/n
+By: Mehdi Farzaneh/n
 
 Hardware:
   Time of Flight sensor x3 (or Ultrasound sensors)
