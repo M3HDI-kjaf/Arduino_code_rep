@@ -1,4 +1,5 @@
-# Arduino_project
+# Maze Solver Robot
+## Arduino_Programming
 
 Mechatronic Project: Maze Solver Robot
 Furtwangen University - Biomedical Engineering - WS25/26
